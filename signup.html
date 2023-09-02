@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<nav>
+    <b> 
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </b>
+</nav>
+
+<div class="box">
+    <section class="top">
+        <h1>Sign Up</h1>
+    </section>
+    <section class="middle">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" class="input">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input">
+        <label for="pas">Password</label>
+        <input type="password" id="pas" class="input">
+    </section>
+    <section class="bottom">
+        <input type="checkbox">
+        <label>Agree to Terms and Conditions</label>
+    
+
+        <button class="sub" onclick="func()">Sign Up</button>
+    
+   
+        <label class="a">Already have an account? </label><a class="login" href="index.html" target="_main">Login</a></section>
+  
+</div>
+
+<footer>
+    All Copyrights &copy; are Reserved by Sk<sup>TM</sup>
+</footer>
+
+<script>
+    function func() {
+        var mail = document.getElementById("email").value;
+        var password = document.getElementById("pas").value;
+        if (mail === "" || password === "") {
+            window.alert("Please fill in all fields.");
+        } else if (password.length < 8) {
+            window.alert("Password must be at least 8 characters");
+        } else {
+            if (window.confirm("All details are correct")) {
+                window.alert("Sign Up Successful");
+            }
+        }
+    }
+</script>
+</body>
+</html>
