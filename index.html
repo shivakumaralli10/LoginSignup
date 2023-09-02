@@ -1,0 +1,74 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link rel="stylesheet" href="login.css">
+</head>                                                            
+<body>
+
+    
+<nav>
+  <b> 
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</b>
+
+</nav>
+
+
+<div class="box">
+    <section class="top">
+    <h1>Login</h1>
+</section>
+<section class="middle">
+    <label for="email">Email</label>
+    <input type="email" id="email" class="input">
+<label for="pas" >
+    Password
+</label>
+<input type="password" id="pas" class="input">
+
+    </section>
+    <section class="bottom">
+        <input type="radio" id="dd">
+        <label for="dd">Remember Me</label>
+    <a class="f" href="#">Forgot Password?</a>
+    </section>
+    <section class="su">
+        <button class="sub" onclick="func()">Login</button>
+   
+    </section>
+<section class="a">
+<label>Don't have an Account? </label><a class="login" href="signup.html" class="move">Register</a>
+</section>
+</div>
+<footer>
+    All Copyrights &copy; are Reserverd by Sk<sup>TM</sup>
+</footer>
+
+
+</body>
+<script>
+    function func(){
+        var mail=document.getElementById("email").value;
+        var password = document.getElementById("pas").value;
+        if (email === "" || password === "") {
+            window.alert("Please fill in all fields.");}
+
+            else if(password.length<8)
+            window.alert("Password must be of 8 characters");
+        
+else{
+if(window.confirm("Check Weather all details are correct"))
+window.alert("Login Successful");
+
+
+}
+    }
+</script>
+</html> 
